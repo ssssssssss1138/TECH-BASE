@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食事の登録</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/register.js" defer></script>
+</head>
+<body>
+    <!--プロフィールマークと歯車マークの表示-->
+    <div class="settings">
+        <div class="settings-button"><i class="fas fa-user"></i></div> <!-- ユーザアイコン -->
+        <div class="settings-button"><i class="fas fa-cog"></i></div> <!-- 設定アイコン -->
+    </div>
+    <!--サイドのタブ-->
+    <div class="tab-container">
+        <div class="sub-title" style="background-color: #ffcccb;">Register</div>
+        <div class="sub-title">Research</div>
+        <div class="sub-title">Review</div>
+    </div>
+    <!--登録するご飯を選択-->
+    <div class="icon-container">
+        <div class="icon-row">
+            <div class="meal" onclick="showInput('breakfast')">
+                <i class="fas fa-coffee"></i>
+                <span>朝ごはん</span>
+            </div>
+            <div class="meal" onclick="showInput('lunch')">
+                <i class="fas fa-utensils"></i>
+                <span>昼ごはん</span>
+            </div>
+            <div class="meal" onclick="showInput('snack')">
+                <i class="fas fa-cookie"></i>
+                <span>おやつ</span>
+            </div>
+            <div class="meal" onclick="showInput('dinner')">
+                <i class="fas fa-drumstick-bite"></i>
+                <span>晩ごはん</span>
+            </div>
+        </div>
+    </div>
+    
+    <!--食事を入力するフォーム-->
+    <div id="register-form" class="register-form" style="display:none;">
+        <h2 id="meal-title"></h2>
+        <input type="text" id="food" placeholder="食べた食材">
+        <input type="number" id="gram" placeholder="量(g)">
+        <button onclick="submitData()">登録</button>
+    </div>
+
+    <div class="graph-container" id="graph-container"></div>
+</body>
+</html>

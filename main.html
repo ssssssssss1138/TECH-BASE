@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食事管理アプリ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <!--ログイン画面-->
+    <div id="login-form" class="login-form">
+        <h2>食事管理アプリ</h2>
+        <input type="text" id="userID" placeholder="ユーザID"><br>
+        <input type="password" id="password" placeholder="パスワード"><br>
+        <button onclick="login()">ログイン</button>
+    </div>
+
+    <!--ログイン後のホーム画面-->
+    <!--プロフィールマークと歯車マークの表示-->
+    <div class="settings" style="display: none;">
+        <div class="settings-button"><i class="fas fa-user"></i></div> <!-- ユーザアイコン -->
+        <div class="settings-button"><i class="fas fa-cog"></i></div> <!-- 設定アイコン -->
+    </div>
+    <!--3つの機能を表示-->
+    <div class="catchphrase" style="display: none;">食事管理で健康をもっと簡単に！</div>
+    <div class="icon-container" style="display: none;">
+        <div class="icon-row">
+            <a href="register.html" class="icon register">
+                <span class="r">R</span>egister
+            </a>
+        </div>
+        <div class="icon-row">
+            <a href="reseach.html" class="icon research">
+                <span class="r">R</span>esearch
+            </a>
+            <a href="review.html" class="icon review">
+                <span class="r">R</span>eview
+            </a>
+        </div>
+    </div>
+</body>
+</html>
