@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイコン配置テスト</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 親要素に position: relative を追加 */
+        body {
+            position: relative;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 50px;
+            margin: 0;
+        }
+
+        /* 設定アイコンとプロフィールアイコンを右上に配置 */
+        .settings {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* アイコンボタンのデザイン */
+        .settings-button i {
+            font-size: 20px;
+            color: white;
+            background-color: blue; /* 青背景に白文字 */
+            padding: 10px;
+            border-radius: 50%; /* 円形に */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 右上に配置するアイコン -->
+    <div class="settings">
+        <div class="settings-button"><i class="fas fa-user"></i></div> <!-- ユーザアイコン -->
+        <div class="settings-button"><i class="fas fa-cog"></i></div> <!-- 設定アイコン -->
+    </div>
+</body>
+</html>
